@@ -1,14 +1,19 @@
-# Data Augmentation Using Large Language Models through Textualization of Structured Data
-Paper
+# Enhancing the Performance of GraphRec-based Recommendation System Using Language Models
+Academic Conference
+    
+  2024 한국정보기술학회 하계종합학술대회(2023.11.20), 우수논문상
+  ICCDA-24 
 
 ## Purpose
-LLM을 활용하여 한정된 정형 데이터를 분석하는 ML의 성능 향상
+여러 주제들로 이루어진 문서를 여러 하위 문서 집합으로 분할할 수 있는 문서 분할 방법론을 제안
 
 ## Methodology
-Tabllm + Q-LoRA를 통해 학습한 LLM을 활용하여 한정된 정형 데이터를 증강 및 분석 성능 비교
+인코딩 기반의 언어모델을 활용하여 임베딩을 수행, 이들의 유사도를 각각 비교하여 특정 임계값 이하로 떨어지는 지점을 하위 문서 분할 지점으로 설정. 이후 클러스터링을 통해 비슷한 주제의 하위 문서 집합을 구성
 	
-	Model :  Llama3(8B)
-	Dataset : Default of credit card clients(대만 신용카드 고객 부도 여부)
+	Model : SBert
+	Dataset : 임의로 생성한 다양한 주제로 이루어진 신문 Data
 
 ## Result
-기존 정형 데이터 증강에 활용하는 SMOTE 기법과 비교하여 약 1.33%p 예측 성능 향상
+1. 사전학습 언어모델을 활용한 시스템으로, 문맥을 고려한 문서 분할 가능
+2. 높은 의미적 동질성을 갖는 문서들의 집합을 제공하여 다양한 텍스트 분석 기법의 성능을 향상시킬 수 있을 것으로 기대
+3. 대량의 문서를 관리하고 분석하는 작업에서 효과적으로 활용할 수 있을 것으로 기대 
